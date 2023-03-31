@@ -2,7 +2,7 @@
 
 Name: uasm
 Version: 2.56.2
-Release: 1
+Release: 2
 Source0: https://github.com/Terraspace/uasm/archive/refs/tags/v%{version}.tar.gz
 Patch0: uasm-2.56.2-clang.patch
 Summary: MASM compatible assembler
