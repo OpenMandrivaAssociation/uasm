@@ -1,0 +1,22 @@
+From 540d2159360fac5d3c2ac5efbeb15e0fcf869756 Mon Sep 17 00:00:00 2001
+From: John Hankinson <john@terraspace.co.uk>
+Date: Mon, 12 Aug 2024 10:37:11 +0100
+Subject: [PATCH] update assemble.c - include simd.h
+
+---
+ assemble.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/assemble.c b/assemble.c
+index 2ce0e14a..a9f28992 100644
+--- a/assemble.c
++++ b/assemble.c
+@@ -43,7 +43,7 @@
+ #include "lqueue.h"
+ #include "orgfixup.h"
+ #include "macrolib.h"
+-//#include "simd.h"
++#include "simd.h"
+ 
+ #if DLLIMPORT
+ #include "mangle.h"

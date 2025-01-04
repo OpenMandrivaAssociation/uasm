@@ -1,14 +1,17 @@
 %undefine _debugsource_packages
 
 Name: uasm
-Version: 2.56.2
-Release: 2
+Version: 2.57r
+Release: 1
 Source0: https://github.com/Terraspace/uasm/archive/refs/tags/v%{version}.tar.gz
-Patch0: uasm-2.56.2-clang.patch
 Summary: MASM compatible assembler
 URL: https://www.terraspace.co.uk/uasm.html
 License: Watcom-1.0
 Group: Development/Tools
+
+%patchlist
+https://github.com/Terraspace/UASM/commit/540d2159360fac5d3c2ac5efbeb15e0fcf869756.patch
+https://github.com/Terraspace/UASM/pull/216.patch
 
 %description
 UASM is a free MASM-compatible assembler based on JWasm with these features:
@@ -36,7 +39,7 @@ UASM is a continued evolution of JWasm.
 %autosetup -p1 -n UASM-%{version}
 
 %build
-%make_build -f gccLinux64.mak CC="%{__cc}" CFLAGS="%{optflags}"
+%make_build -f Makefile-Linux.mak CC="%{__cc}" CFLAGS="%{optflags}"
 
 %install
 mkdir -p %{buildroot}%{_bindir}
