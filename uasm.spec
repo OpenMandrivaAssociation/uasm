@@ -13,6 +13,7 @@ Group: Development/Tools
 https://github.com/Terraspace/UASM/commit/540d2159360fac5d3c2ac5efbeb15e0fcf869756.patch
 https://github.com/Terraspace/UASM/pull/216.patch
 
+BuildRequires:	make
 %description
 UASM is a free MASM-compatible assembler based on JWasm with these features:
 
